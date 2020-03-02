@@ -10,16 +10,19 @@ package person;
  * @author Jose Silva
  */
 public class users {
+
     private String firstName;
     private String lastName;
+    private String username;
     private int ID;
     private int password;
-    
-    void users(){
-        firstName="";
-        lastName="";
-        ID=2;
-        password=0;
+
+    public users(String firstName, String lastName, String username, int ID, int password) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.username = username;
+        this.ID = ID;
+        this.password = password;
     }
 
     /**
@@ -48,6 +51,14 @@ public class users {
      */
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     /**

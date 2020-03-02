@@ -7,6 +7,7 @@ package person;
 
 import java.util.*;
 import java.io.*;
+import DB.*;
 
 /**
  *
@@ -20,28 +21,17 @@ public class admin implements Serializable {
     private int ID;
     private int password;
 
-    public admin() { //Admin contructor to initialize object.
-        firstName = "admin";
-        lastName = "admin";
-        userName = "admin";
-        ID = 1;
-        password = 1234;
+    public admin(String firstName, String lastName, String userName, int ID, int password) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.userName = userName;
+        this.ID = ID;
+        this.password = password;
     }
 
     public void addStudents() { // Method to add students only for Admin
-        users students = new users();
-        boolean flag = true;
-        String flag2 = "y";
-        int i=1;
-        Scanner input = new Scanner(System.in);
-        System.out.print("Please insert Student's first name: ");
-        students.setFirstName(this.firstName = input.next());
-        System.out.print("Please insert Student's last name: ");
-        students.setLastName(this.lastName = input.next());
-        System.out.print("Please insert Student password: ");
-        students.setPassword(this.password = input.nextInt());
-        i=this.ID+1;
-        i++;
+        writerUser a = new writerUser();
+        a.addStudent();
     }
 
     /**
