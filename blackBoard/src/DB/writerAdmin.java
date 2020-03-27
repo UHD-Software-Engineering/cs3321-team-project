@@ -5,11 +5,8 @@
  */
 package DB;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
-import java.util.Scanner;
+import java.io.*;
+import java.util.*;
 import person.admin;
 import person.users;
 
@@ -18,7 +15,8 @@ import person.users;
  * @author Jose Silva
  */
 public class writerAdmin {
-        public void addAdmin() {
+
+    public static void addAdmin() {
         int ID = 0;
         Scanner input = new Scanner(System.in);
         System.out.print("Admin first name: ");
@@ -34,8 +32,8 @@ public class writerAdmin {
 
         admin ad = new admin(firstName, lastName, username, ID, password);
         try {
-            boolean exists = new File("userList.txt").exists();
-            FileOutputStream fos = new FileOutputStream("userList.txt", true);
+            boolean exists = new File("adminList.txt").exists();
+            FileOutputStream fos = new FileOutputStream("adminList.txt", true);
             ObjectOutputStream oos = exists
                     ? new ObjectOutputStream(fos) {
                 protected void writeStreamHeader() throws IOException {

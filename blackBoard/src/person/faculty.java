@@ -18,7 +18,6 @@ public class faculty {
     private String username;
     private int password;
     private int ID;
-    classes cl = new classes();
 
     public faculty(String firstName, String lastName, String username, int password, int ID) {
         this.firstName = firstName;
@@ -66,13 +65,5 @@ public class faculty {
 
     public void setID(int ID) {
         this.ID = ID;
-    }
-
-    public classes getCl() {
-        return cl;
-    }
-
-    public void setCl(classes cl) {
-        this.cl = cl;
     }
 }

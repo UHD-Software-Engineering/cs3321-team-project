@@ -5,8 +5,12 @@
  */
 package blackboard;
 
-import person.*;
 import java.util.*;
+import GUI.*;
+import DB.*;
+import java.io.FileNotFoundException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -17,9 +21,8 @@ public class BlackBoard {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
+        //writerAdmin.addAdmin();
         // TODO code application logic here
-        admin a = new admin("test", "test", "test", 1, 1);
-        a.addStudents();
     }
 }

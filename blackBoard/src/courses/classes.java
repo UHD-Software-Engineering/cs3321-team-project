@@ -18,6 +18,12 @@ public class classes {
     private int classCode;
     ArrayList<users> studentList = new ArrayList<>();
 
+    public classes(String className, int classCode) {
+        this.className = className;
+        this.classCode = classCode;
+        
+    }
+
     public String getClassName() {
         return className;
     }
